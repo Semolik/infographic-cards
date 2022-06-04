@@ -1,6 +1,6 @@
-@import url(/assets/fonts/BloggerSans/BloggerSans.css);
-@import url(/assets/fonts/BloggerSans/BloggerSans-Bold.css);
-@import url(/assets/fonts/BloggerSansLight/BloggerSans-Light.css);
+@import url(assets/fonts/BloggerSans/BloggerSans.css);
+@import url(assets/fonts/BloggerSans/BloggerSans-Bold.css);
+@import url(assets/fonts/BloggerSansLight/BloggerSans-Light.css);
 
 :root {
     --color-1: #0f355c;

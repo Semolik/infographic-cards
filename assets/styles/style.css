@@ -1,0 +1,231 @@
+@import url(/assets/fonts/BloggerSans/BloggerSans.css);
+@import url(/assets/fonts/BloggerSans/BloggerSans-Bold.css);
+@import url(/assets/fonts/BloggerSansLight/BloggerSans-Light.css);
+
+:root {
+    --color-1: #0f355c;
+    --border-radius-1: 10px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    font-family: "BloggerSans", Georgia;
+    overflow-x: hidden;
+}
+
+.cards-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 450px);
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    
+}
+
+.cards-container .card {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 200px 1fr;
+    gap: 15px;
+}
+
+.cards-container .card .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-1);
+    padding: 3px;
+    background-color: var(--color-1);
+}
+
+.cards-container .card .image-container img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: var(--border-radius-1);
+    height: 100%;
+}
+
+.cards-container .card .image-container .number {
+    position: absolute;
+    margin-left: -3px;
+
+    background-color: var(--color-1);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-right-radius: var(--border-radius-1);
+    font-weight: bold;
+}
+
+.cards-container .card .image-container .bottom-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--color-1);
+    color: white;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-top-left-radius: var(--border-radius-1);
+}
+
+.cards-container .card .image-container .number span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 25px;
+}
+
+.cards-container .card .card-info {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-1);
+    padding: 6px 0px;
+}
+
+.cards-container .card .card-info .title {
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cards-container .card .card-info .vol-info {
+    font-family: "BloggerSansLight", Georgia;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: auto;
+}
+
+.cards-container .card .card-info .release-date-label {
+    color: black;
+    margin-bottom: 3px;
+    font-size: 14px;
+    margin: 0px 5px;
+}
+
+.cards-container .card .card-info .dates {
+    margin: 0px 5px;
+    display: flex;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.cards-container .card .card-info .dates .days-on-sale {
+    margin-left: auto;
+}
+
+.cards-container .card .card-info .block {
+    background-color: var(--color-1);
+    border-radius: var(--border-radius-1);
+    padding: 5px 8px;
+    display: flex;
+    color: white;
+    margin-bottom: 3px;
+    transition: .2s background-color;
+}
+.cards-container .card .card-info .block:hover {
+    background-color: #A54657;
+}
+.cards-container .card .card-info .block .block-title {
+    text-transform: uppercase;
+    display: flex;
+}
+
+.cards-container .card .card-info .block .block-title .clarification {
+    text-transform: none;
+    font-size: 14px;
+    padding-top: 2px;
+    margin-left: 5px;
+}
+
+.cards-container .card .card-info .block .block-value {
+    margin-left: auto;
+}
+
+.cards-container .card .card-info .genres-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+    padding: 5px 0px;
+}
+
+.cards-container .card .card-info .genres-container .genres {
+    display: flex;
+    justify-content: center;
+}
+
+.cards-container .card .card-info .genres-container .genres .genre {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.cards-container .card .card-info .genres-container .genres .genre:not(:last-child)::after {
+    content: '';
+    margin: 0px 3px;
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    background-color: var(--color-1);
+    border-radius: 50%;
+}
+
+.cards-container .card .card-info .genres-container .line-container {
+    display: flex;
+    align-items: center;
+}
+
+.cards-container .card .card-info .genres-container .line-container .line {
+    background-color: var(--color-1);
+    height: 2px;
+    width: 100%;
+}
+
+.cards-container .card .card-info .genres-container .line-container::after,
+.cards-container .card .card-info .genres-container .line-container::before {
+    content: '';
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background-color: var(--color-1);
+    border-radius: 50%;
+}
+
+.cards-container .card .card-info .role-container {
+    display: flex;
+    width: 100%;
+}
+
+.cards-container .card .card-info .role-container .name {
+    font-weight: bold;
+}
+
+.cards-container .card .card-info .role-container .role {
+    margin-left: auto;
+}
+
+@media (max-width: 960px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    .cards-container .card {
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+    .cards-container .card .image-container img {
+        height: auto;
+    }
+}
